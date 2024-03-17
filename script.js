@@ -8,7 +8,6 @@ const getProducts = async () => {
     const response = await fetch(productsUrl);
     if (!response.ok) throw new Error('Failed to fetch');
     const { products } = await response.json();
-    console.log(products);
     products.forEach((product) => {
       const { title, price, description, images } = product;
       const productLi = document.createElement('li');
@@ -83,3 +82,25 @@ function sendQuickMessage() {
 }
 
 quickMessageForm.addEventListener('submit', sendQuickMessage);
+
+// ABOUT US WORKERS
+const usersUl = document.querySelector('#about-us-workers ul');
+console.log();
+const fetchUsers = async () => {
+  const usersURL = 'https://dummyjson.com/users';
+  try {
+    const response = await fetch(usersURL);
+    if (!response.ok) throw new Error('Something wrong with fetching users!');
+    // data.users
+    const { users } = await response.json();
+    users.forEach((user) => {
+      const userLi = document.createElement('li');
+      const { firstName, lastName } = user;
+      userLi.textContent = `${firstName} ${lastName}`;
+      usersUl.appendChild(userLi);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+fetchUsers();

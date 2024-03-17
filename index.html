@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>My Website</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="home">
+      <h2>Home</h2>
+      <p>Welcome to our website!</p>
+    </section>
+    <section id="product">
+      <h2>Product</h2>
+      <p>Find Product by Title</p>
+      <form id="product-title-form">
+        <input type="text" id="product-title" required />
+        <button type="submit" id="submit-product-title">Search</button>
+      </form>
+      <ul id="product-search-results"></ul>
+      <p>Check out our amazing products!</p>
+      <ul id="product-list"></ul>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Get in touch with us!</p>
+      <h2>Szybkie zapytanie</h2>
+      <form id="contact-form">
+        <label for="company-address">Adres firmy:</label><br />
+        <input type="text" id="company-address" name="company-address" /><br />
+
+        <label for="phone-number">Numer telefonu:</label><br />
+        <input type="text" id="phone-number" name="phone-number" /><br />
+
+        <label for="email">Adres e-mail:</label><br />
+        <input type="email" id="email" name="email" /><br />
+
+        <button type="submit">Wyślij</button>
+      </form>
+    </section>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Learn more about our company.</p>
+    </section>
+    <footer>
+      <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

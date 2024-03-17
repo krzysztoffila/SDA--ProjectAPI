@@ -13,7 +13,8 @@ const getProducts = async () => {
       const productLi = document.createElement('li');
       const productButton = document.createElement('button');
       const displayDetailsParagfaph = document.createElement('p');
-      productButton.textContent = 'display details';
+      productButton.textContent = 'Show Details';
+      productButton.classList.add('product-button');
       displayDetailsParagfaph.textContent = `Description: ${description}, Price: ${price};`;
       productLi.textContent = `${title}`;
       const img = document.createElement('img');

@@ -68,3 +68,18 @@ const findProductByTitle = async (event) => {
   }
 };
 productForm.addEventListener('submit', findProductByTitle);
+
+const quickMessageForm = document.querySelector('#contact-form');
+const companyAdressInput = document.querySelector('#company-address');
+const phoneNumberInput = document.querySelector('#phone-number');
+const emailInput = document.querySelector('#email');
+
+function sendQuickMessage() {
+  const companyAdress = companyAdressInput.value;
+  const phoneNumber = phoneNumberInput.value;
+  const email = emailInput.value;
+
+  alert(`WYSŁANO WIADOMOŚĆ: ${companyAdress} ${phoneNumber} ${email}`);
+}
+
+quickMessageForm.addEventListener('submit', sendQuickMessage);
